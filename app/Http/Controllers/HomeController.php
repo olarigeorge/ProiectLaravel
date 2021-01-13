@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use DB;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +23,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $articole = DB::table('articles') ->orderBy('date','DESC')->get();
+        $tags = DB::table('tags') ->get();
+        return view('/home',['articole'=>$articole,'tags'=>$tags]);
     }
 }

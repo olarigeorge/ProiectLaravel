@@ -49,6 +49,25 @@
                                 </li>
                             @endif
                         @else
+                        <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link " href="home">
+                                    HOME
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role ="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+
+                                    CATEGORII
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-left"aria-labelledby="navbarDropdown">
+
+                                <a class="dropdown-item" href="calculatoare">Calculatoare</a>
+                                <a class="dropdown-item" href="preturi">Preturi</a>
+                                <a class="dropdown-item" href="reviewuri">Reviewuri</a>
+                             </div>
+
+
+                            </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}

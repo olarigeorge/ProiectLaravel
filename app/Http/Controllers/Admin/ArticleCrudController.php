@@ -69,9 +69,9 @@ class ArticleCrudController extends CrudController
         CRUD::setValidation(ArticleRequest::class);
 
         CRUD::field('category_id');
-        CRUD::field('content')->type('ckeditor');
+        CRUD::field('concent')->type('ckeditor');
         $this->crud->addField([
-            'name'=>'content',
+            'name'=>'concent',
             'type'=>'ckeditor',
         ]);
         CRUD::field('date');
